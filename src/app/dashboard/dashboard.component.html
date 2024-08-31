@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+ 
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h1>My Website</h1>
+            <nav class="nav-links">
+                <a routerLink="home">Home</a>
+                <a routerLink="welcome">Welcome</a>
+                <a routerLink="data-binding">Data-Binding</a>
+                <a routerLink="calculator">Calculator</a>
+                <a routerLink="rectangle">Rectangle</a>
+                <a routerLink="circle">circle</a>
+                <a routerLink="bmi">Check-BMI</a>
+                <a routerLink="dice">Dice</a>
+                <a routerLink="directives-pipes">Directives Pipes</a>
+                <a routerLink="employees">Employee Details</a>
+                <a routerLink="amazon-cart">Amazon Cart</a>
+                <a routerLink="vehicles">Vehicles</a>
+                <a routerLink="bank-accounts">Bank Accounts</a>
+                <a routerLink="flipkart-cart">Flipkart Cart</a>
+                <a routerLink="emails">Email</a>
+                <a routerLink="create-vehicles">Create Vehicles</a>
+                <a routerLink="create-bank-account">Create Bank Account</a>
+                <a routerLink="students">Student Details</a>
+                <a routerLink="create-student">Add Student</a>
+                <a routerLink="memes">Show Memes</a>
+                <a routerLink="reload">Reload</a>
+            </nav>
+            <button class="logout-btn" (click)="logout()">Logout</button>
+        </div>
+        <div class="main-content">
+            <!-- wherever i will write this <router-outer> in that area that page html will be visible,after clicking on the anchor tag -->
+            <router-outlet></router-outlet>  
+        </div>
+    </div>
+</body>
+</html>

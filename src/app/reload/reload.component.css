@@ -1,0 +1,22 @@
+.fancy-message {
+    font-size: 2em;
+    color: #ff6347; /* Tomato color */
+    text-align: center;
+    margin: 20px 0;
+}
+
+.fancy-button {
+    font-size: 1.2em;
+    color: #fff; /* White text */
+    background-color: #4682b4; /* SteelBlue color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 520px;
+}
+
+.fancy-button:hover {
+    background-color: #5a9bd4; /* Lighter shade of SteelBlue on hover */
+}

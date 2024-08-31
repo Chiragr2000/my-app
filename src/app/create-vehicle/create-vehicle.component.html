@@ -1,0 +1,35 @@
+<p>create-vehicle works!</p>
+    
+     <div class="parent">
+      
+    <form [formGroup]="vehicleForm">
+        <h1>{{ id ? 'Edit vehicle Form' : 'create vehicle Form'}}</h1>
+
+        <label for="">vehicle</label>
+        <input type="text" formControlName="Vehicle">
+        <br>
+
+        <label for="">Manufacturer</label>
+        <input type="text" formControlName="manufacturer">
+        <br>
+
+        <button (click)="create()">{{ id ? 'update' : 'craete'}}</button>
+    </form>
+
+<!-- <div class="parent">
+
+    <form [formGroup]="vehicleForm">
+        <h1>{{ id ? 'Edit vehicle Form' : 'create vehicle Form'}}</h1>
+
+        <label for="">vehicle</label>
+        <input type="text" formControlName="Vehicle">
+        <br>
+
+        <label for="">Manufacturer</label>
+        <input type="text" formControlName="manufacturer">
+        <br>
+
+        <button (click)="create()">{{ id ? 'update' : 'craete'}}</button>
+    </form> -->
+
+</div>

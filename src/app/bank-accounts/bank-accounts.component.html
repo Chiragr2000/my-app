@@ -1,0 +1,33 @@
+<input type="text" [(ngModel)]="term" (keyup)="filter()">
+
+<!--=  ?limit=10&page=1  -->
+<form #count="ngForm" (ngSubmit)="pagination(count.value)">
+    <input type="number" ngModel name="count" placeholder="enter count">
+    <input type="number" ngModel name="page" placeholder="enter page">
+    <button type="submit">filter</button>
+    <button (click)="nextPage()">next ></button>
+</form>
+<table>
+    <thead>
+        <tr>
+            <th>Account Name</th>
+            <th>Available Balance</th>
+            <th>Account Number</th>
+            <th>City</th>
+            <th>Profile Picture</th>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let bcd of bankAccountsDetails">
+        <tr>
+            <td>{{bcd.account_name}}</td>
+            <td>{{bcd.available_balance}}</td>
+            <td>{{bcd.account_number}}</td>
+            <td>{{bcd.city}}</td>
+            <td>
+                <img [src]="bcd.profie_picture" alt="profile picture" width="100">
+            </td>
+            <td>{{bcd.id}}</td>
+        </tr>
+    </tbody>
+</table>

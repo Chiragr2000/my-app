@@ -1,0 +1,19 @@
+<div class="outer" >
+    <div class="parent"  >
+        <div class="child" *ngFor="let data of flipkartProducts"> 
+            <div class="top">
+                <div class="picture">
+                 <img src="{{data.image}}" alt="">
+                </div>
+                <div class="rating">
+                    <p>{{data.rating.rate}}</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <h3>{{data.category}}</h3>
+                <p>{{data.title}}</p>
+                <p id="rs">Rs {{data.price}}</p>
+            </div>
+        </div>
+    </div>
+</div>

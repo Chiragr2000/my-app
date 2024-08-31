@@ -1,0 +1,55 @@
+/* Container styling */
+.dice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dice image styling */
+  .dice-container img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .dice-container img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #5c67f2;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4b55d8;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Additional styles for smoother UI */
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #5c67f2;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  

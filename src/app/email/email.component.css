@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.parent{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    /* justify-content: space-between; */
+    overflow: auto;
+    flex-direction: column;
+
+}
+.child{
+    /* background-color: aqua; */
+    height: 90%;
+    width: 90%;
+    display: flex;
+    gap: 5%;
+    padding-left: 20px;
+}

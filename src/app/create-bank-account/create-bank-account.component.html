@@ -1,0 +1,20 @@
+<form [formGroup]="accountForm" novalidate>
+    <h1>Create Bank Account</h1>
+    <label for="">Account Name</label>
+    <!--formControlName="Vehicle" is with same name mapping  -->
+    <input type="text" formControlName="account_name">
+    <br>
+    <label for="">Avaliable Balance</label>
+    <input type="text" formControlName="available_balance">
+    <br>
+    <label for="">Account Number</label>
+    <input type="text" formControlName="account_number">
+    <br>
+    <label for="">City</label>
+    <input type="text" formControlName="city">
+    <br>
+    <label for="">Profile Picture Url</label>
+    <input type="text" formControlName="profie_picture">
+    <br>
+    <button (click)="create()">Create</button>
+</form>

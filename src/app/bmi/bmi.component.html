@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <!-- <link rel="stylesheet" href="task3-12aug.css"> -->
+
+</head>
+
+<body>
+    <div class="box">
+        <div id="box">
+            <div class="topper">
+                <h2>Body Mass Index (BMI) Calculator</h2>
+            </div>
+            <div class="footer">
+                <div class="fleft">
+                    <div class="form">
+                        <div id="middle">
+                            <label for="">Height:</label>
+                            <input type="number" [(ngModel)]="height">
+                            <br><br>
+                            <label for="">Weight:</label>
+                            <input type="number" [(ngModel)]="weight" >
+                            <br><br>
+                            <button (click)="calculateBmi()">Calculate</button>
+                            <br>
+                            <h3 id="result">BMI: {{result}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="fright">
+                    <img src="./assets/bmi.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- <script>
+        const calculateBmi = () => {
+            var height = document.getElementById('height').valueAsNumber;
+            var weight = document.getElementById('weight').valueAsNumber;
+            var result = weight / ((height / 100) * (height / 100))
+            document.getElementById('result').innerText = "Your BMI is " + result.toFixed(1) + "(Over Weight)."
+        }
+
+    </script> -->
+</body>
+
+</html>

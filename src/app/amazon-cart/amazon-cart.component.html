@@ -1,0 +1,52 @@
+
+<input type="text" [(ngModel)]="term" (keyup)="filter()">
+<button (click)="freeDelivery()">only free delivery</button>
+<button (click)="lowToH()">price low to high</button>
+<button (click)="highToL()">price high to low</button> <br>
+<button (click)="ratingLh()">rating low to high </button>
+<button (click)="ratingHl()">rating high to low </button>
+<button (click)="discount()">apply 50% discount</button>
+<button (click)="deliveryCharge()">price after delivery charge</button><br>
+<button (click)="totalPrice()">Total Price</button>
+<h4>Total price : {{total}}</h4>
+<button (click)="totalCartItems()">Total Cart Item</button>
+<h4>Total Items : {{totalItems}}</h4>
+<form (ngSubmit)="addToCart()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="namess" name="name"> <br>
+    <label for="price">Price:</label>
+    <input type="number" id="price" [(ngModel)]="pricess" name="price"> <br>
+    <label for="rating">Rating:</label>
+    <input type="number" id="rating" [(ngModel)]="ratingss" name="rating"> <br>
+    <label for="freeDelivery">Free Delivery:</label>
+    <input type="radio" id="freeDeliveryYes" [(ngModel)]="isFreeDelivery" [value]="true" name="freeDelivery">
+    <label for="freeDeliveryYes">Yes</label>
+    <input type="radio" id="freeDeliveryNo" [(ngModel)]="isFreeDelivery" [value]="false" name="freeDelivery">
+    <label for="freeDeliveryNo">No</label><br>
+    <button type="submit">Add to Cart</button>
+</form>
+
+<table [cellPadding]="10" [cellSpacing]="0" border="4">
+    <thead >
+        <tr>
+            <th>SNO</th>
+            <th>Prduct Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Free Delivery</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cart of carts;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{cart.pname}}</td>
+            <td >{{cart.price}}</td>
+            <td>{{cart.rating}}</td>
+            <td>{{cart.isFreeDelivery}}</td>   
+            <td>
+                <button (click)="delete(i)">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

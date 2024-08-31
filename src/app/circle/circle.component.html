@@ -1,0 +1,8 @@
+<div class="calculator">
+    <h1 id="result">{{result}}</h1><br><br>
+    <label for="">radius</label>
+   <input type="number" [(ngModel)]="radius"><br><br>
+   <button [disabled]="!radius" (click)="area()">area</button>
+   <button [disabled]="!radius" (click)="perimeter()">perimeter</button>
+   </div>
+ 

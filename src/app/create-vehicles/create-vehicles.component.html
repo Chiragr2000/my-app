@@ -1,0 +1,29 @@
+<form [formGroup]="vehicleForm">
+    <h1>Create Vehicle Object</h1>
+    <label for="">Vehicles</label>
+    <!--formControlName="Vehicle" is with same name mapping  -->
+    <input type="text" formControlName="Vehicle">
+    <br>
+    <label for="">Manufacturer</label>
+    <input type="text" formControlName="manufacturer">
+    <br>
+    <label for="">Model</label>
+    <input type="text" formControlName="model">
+    <br>
+    <label for="">Type</label>
+    <input type="text" formControlName="type">
+    <br>
+    <label for="">Fuel</label>
+    <input type="text" formControlName="fuel">
+    <br>
+    <label for="">Color</label>
+    <input type="text" formControlName="color">
+    <br>
+    <label for="">Image</label>
+    <input type="text" formControlName="image">
+    <br>
+    <label for="">Cost</label>
+    <input type="text" formControlName="cost">
+    <br>
+    <button (click)="create()">Create</button>
+</form>

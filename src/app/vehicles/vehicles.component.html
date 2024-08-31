@@ -1,0 +1,57 @@
+<!--=  ?filter=red-->
+<input type="text" [(ngModel)]="term" (keyup)="filter()">
+<!--= ?sortBy=color&order=asc -->
+<label for="">Column:</label>
+<select name="" id="" [(ngModel)]="column">
+    <option value="color">COLOR</option>
+    <option value="type">TYPE</option>
+    <option value="cost">COSTSS</option>
+</select>
+
+<label for="">Order:</label>
+<select name="" id="" [(ngModel)]="order" >
+    <option value="asc">Ascending </option>
+    <option value="desc">Descending</option>
+</select>
+<button id="sort" (click)="sort()">sort</button>
+<!-- for fetchById -->
+<input type="text" name="" id="" [(ngModel)]="id" placeholder="search by id" (keyup)="fetchedById()">
+
+<table>
+    
+    <thead>
+        <tr>
+            <th>Vehicle</th>
+            <th>manufacturer</th>
+            <th>model</th>
+            <th>type</th>
+            <th>fuel</th>
+            <th>color</th>
+            <th>image</th>
+            <th>cost</th>
+            <th>id</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <!-- see Here!!, Vehicles is responsible for changing the view -->
+    <tbody *ngFor="let veh of vehicles">
+        <tr>
+            <td>{{veh.Vehicle}}</td>
+            <td>{{veh.manufacturer}}</td>
+            <td>{{veh.model}}</td>
+            <td>{{veh.type}}</td>
+            <td>{{veh.fuel}}</td>
+            <td>{{veh.color}}</td>
+            <td>
+                <img [src]="veh.image" alt="{{veh.model}}" width="100">
+            </td>
+            <td>{{veh.cost}}</td>
+            <td>{{veh.id}}</td>
+            <td>
+                <button (click)="delete(veh.id)">delete</button>
+                 <button (click)="view(veh.id)">view</button>
+                <button (click)="edit(veh.id)">edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

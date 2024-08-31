@@ -1,0 +1,9 @@
+<div class="calculator">
+    <h1 id="result" style="background-color: green; color: white;">{{result}}</h1><br><br>
+ <label for="">length</label>
+<input type="number"  [(ngModel)]="length"><br>
+<label for="">perimeter</label>
+<input type="number"  [(ngModel)]="breadth"><br><br>
+<button [disabled]="!length || !breadth" (click)="area()">area</button>
+<button [disabled]="!length || !breadth"  (click)="perimeter()">perimeter</button>
+</div>

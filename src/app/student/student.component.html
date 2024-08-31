@@ -1,0 +1,103 @@
+
+<div class="outer">
+    <div class="forbutton">
+        <input type="text" [(ngModel)]="text" (keyup)="searchStudent()" placeholder="search student">
+        <div class="order">
+            <label for="">column:</label>
+        <select name="" id="" [(ngModel)]="column">
+            <option value="name">name</option>
+            <option value="city">city</option>
+        </select>
+        <label for="">order:</label>
+        <select name="" id="" [(ngModel)]="order">
+            <option value="asc">asc</option>
+            <option value="desc">desc</option>
+        </select>
+        <button (click)="searchByOrder()">sort</button>
+        </div>
+        <div class="pagination">
+            <input type="number" [(ngModel)]="count">
+            <input type="number" [(ngModel)]="pageNo">
+            <button (click)="paginate()">paginate</button>
+        </div>
+    </div>
+    <div class="parent"></div>
+    <div class="inner">
+        <div class="child" *ngFor="let stu of studentDetails">
+            <div class="box1">
+                <div class="left">
+                    <img src="{{stu.school_logo}}" alt="">
+                </div>
+                <div class="right">
+                    <h3>{{stu.school_name}}</h3>
+                
+                </div>
+            </div>
+            <div class="box2">
+                <div class="left2">
+                    <div class="pic">
+                        <div class="leftside">
+                           <p>NAME:</p>
+                        </div>
+                       <div class="side">
+                        <h4> {{stu.name}}</h4>
+                       </div>
+                    </div>
+                    <div class="pic">
+                         <div class="leftside">
+                            <p>PHONE:</p>
+                         </div>
+                       <div class="side">
+                        <h4> {{stu.phone}}</h4>
+                       </div>
+                    </div>
+                    <div class="pic">
+                       <div class="leftside">
+                      <p>DOB:</p>
+                       </div>
+                      <div class="side">
+                        <h4> {{stu.dob}}</h4>
+                      </div>
+                    </div>
+                    <div class="pic">
+                       <div class="leftside">
+                      <p>CITY:</p>
+                       </div>
+                      <div class="side">
+                        <h4> {{stu.city}}</h4>
+                      </div>
+                    </div>
+                    <div class="pic">
+                        <div class="leftside">
+                            <p>EMAIL:</p>
+                        </div>
+                      <div class="side">
+                        <h4> {{stu.email}}</h4>
+                      </div>
+                    </div>
+                </div>
+                <div class="right2">
+                    <img src="{{stu.profile_picture}}" alt="">
+                </div>
+            </div>
+            <div class="box3">
+              <div class="box31">
+                <div class="box311">
+                    <p>School City:</p>
+                    <h4>{{stu.school_city}}</h4>
+                </div>
+                <div class="box312">
+                    <p>School Pin:</p>
+                    <h4>{{stu.school_pin}}</h4>
+                </div>
+              </div>
+              <div class="box32">
+                <button id="button1">View</button>
+                <button id="button2">Edit</button>
+                <button (click)="deleteStudent(stu.id)" id="button3">Delete</button>
+              </div>
+            </div>
+        </div>
+       
+    </div>
+</div>

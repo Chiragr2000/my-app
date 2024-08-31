@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
+.calculator {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    margin: 130px;
+    margin-left: 300px;
+}
+
+.calculator:hover {
+    transform: translateY(-10px);
+}
+
+#result {
+    font-size: 2.5em;
+    color: #fff;
+    margin: 0;
+    padding: 15px;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+
+.calculator label {
+    font-size: 1.3em;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.calculator input[type="number"] {
+    width: calc(100% - 40px);
+    padding: 12px 15px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.calculator input[type="number"]:focus {
+    border-color: #9b59b6;
+}
+
+.calculator button {
+    width: 45%;
+    padding: 12px;
+    font-size: 1em;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.calculator button:hover {
+    background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+    transform: translateY(-5px);
+}
+.calculator button:disabled{
+    cursor: not-allowed;
+}

@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Welcome Section */
+.welcome {
+    background-color: #4CAF50; /* Green background color */
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.welcome h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.welcome p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+.welcome .btn {
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.welcome .btn:hover {
+    background-color: #45a049;
+    color: #fff;
+}
