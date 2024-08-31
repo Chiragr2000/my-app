@@ -106,3 +106,7 @@ h2 {
 .bottom-links a:hover {
     color: #71b7e6;
 }
+h1{
+    text-align: center;
+    color: orange;
+}
